@@ -14,8 +14,12 @@ timeline
     .from('.coke', { y: '-100%', ease: 'back.out' })
     .to('.can', { scale: 1, rotation: 720, ease: "power4.out" })
 
-    // using this method, we dont need delays, as it will be timed correctly anyways. note we can still use delay using "absolute or relative delays,find below"
-    // .to('.can', { scale: 1, rotation: 720, ease: "power4.out", '<.5' })
+// using this method, we dont need delays, as it will be timed correctly anyways. note we can still use delay using "absolute or relative delays,find below"
+// .to('.can', { scale: 1, rotation: 720, ease: "power4.out", '<.5' })
 
-    // we can also reverse our entire animation sequence, by using some trigger(probably a button), adding event listener with onclick and then:
-    // timeline.reverse
+// we can also reverse our entire animation sequence, by using some trigger(probably a button), adding event listener with onclick and then:
+// timeline.reverse
+
+function expand(e) {
+    gsap.to('.coke', { duration: 2, width: '100%', ease: "power4.out" })
+}
