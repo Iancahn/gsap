@@ -1,4 +1,5 @@
 * {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,13 +30,19 @@
 
 .coke-text {
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.55rem;
     z-index: 1;
+    width: 550px;
+}
+
+.coke-text h1 {
+    font-size: 3.2rem;
+    line-height: 2.2;
 }
 
 .can {
     position: relative;
-    bottom: 140px;
+    bottom: 250px;
     right: 50px;
     max-height: auto;
     max-width: 550px;
@@ -43,8 +50,9 @@
     transition-duration: 1000ms;
 }
 
-/* .can:hover {
-    position: relative;
-    bottom: 120px;
-    right: -190px;
-} */
+.disclaimer {
+    position: fixed;
+    bottom: 15px;
+    right: 50px;
+    font-weight: bolder;
+}

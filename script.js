@@ -11,8 +11,9 @@ const timeline = gsap.timeline({ defaults: { duration: 1.5 } })
 // to make it even better, we can just do it like a real animation timeline
 
 timeline
-    .from('.coke', { y: '-100%', ease: 'back.out' })
-    .to('.can', { scale: 1, rotation: 720, ease: "power4.out" })
+    .to('.coke-text', { duration: 0.001, opacity: '0' })
+    .to('.coke', { y: '40%', ease: 'back.out' })
+    .from('.can', { scale: 1, rotation: 720, ease: "power4.out" })
 
 // using this method, we dont need delays, as it will be timed correctly anyways. note we can still use delay using "absolute or relative delays,find below"
 // .to('.can', { scale: 1, rotation: 720, ease: "power4.out", '<.5' })
@@ -23,7 +24,8 @@ timeline
 function expand() {
     gsap.to('.coke', { duration: 1, width: '60%', ease: "power4.out" })
     gsap.to('.can', { duration: 1, x: '65%' })
-    gsap.from('.coke-text', { duration: 1, x: '-15%', y: '-500%' })
+    gsap.to('.coke-text', { duration: 1, x: '30%', y: '50%' })
+    gsap.to('.coke-text', { duration: 0.8, opacity: '1', delay: '1.5' })
     console.log("Expand")
 }
 
