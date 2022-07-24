@@ -1,3 +1,4 @@
 console.log("Hello World");
 
-gsap.from('.hypno', { duration: 5, scale: 5, rotation: 720 })
+gsap.to('.coke', { duration: 3, scale: 1.1, ease: "power4.out" })
+gsap.to('.can', { duration: 2, scale: 1, rotation: 720, ease: "power4.out" })

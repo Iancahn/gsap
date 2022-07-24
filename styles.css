@@ -21,6 +21,10 @@
     border-radius: 50%;
 }
 
+.coke p {
+    opacity: 0%;
+}
+
 /* .coke:hover {
     width: 800px;
     border-radius: 15%;
@@ -33,9 +37,4 @@
     max-height: auto;
     max-width: 550px;
     z-index: 5;
-}
-
-.can:hover {
-    position: relative;
-    right: 1000px;
 }
