@@ -4,7 +4,7 @@ console.log("Hello World");
 // gsap.to('.can', { duration: 2, scale: 1, rotation: 720, ease: "power4.out" })
 
 // Use timeline instead of repeating a lot of messy animation code
-const timeline = gsap.timeline({ defaults: { duration: 2 } })
+const timeline = gsap.timeline({ defaults: { duration: 1.5 } })
 // Now we dont have to repeat duration:1 everywhere, we have it as default
 // -->timeline.from('.coke', { y: '-100%', ease: 'back.out' })
 // -->timeline.to('.can', { scale: 1, rotation: 720, ease: "power4.out" })
@@ -20,6 +20,52 @@ timeline
 // we can also reverse our entire animation sequence, by using some trigger(probably a button), adding event listener with onclick and then:
 // timeline.reverse
 
-function expand(e) {
-    gsap.to('.coke', { duration: 2, width: '100%', ease: "power4.out" })
+function expand() {
+    gsap.to('.coke', { duration: 1, width: '60%', ease: "power4.out" })
+    gsap.to('.can', { duration: 1, x: '65%' })
+    gsap.from('.coke-text', { duration: 1, x: '-15%', y: '-500%' })
+    console.log("Expand")
 }
+
+function retract() {
+    gsap.to('.coke', { duration: 1.5, width: '-60%', ease: "power4.out" })
+    console.log("Retract")
+}
+
+document.getElementsByClassName('coke')[0].onmouseover = () => {
+    expand();
+}
+
+// document.getElementsByClassName('coke')[0].onmouseout = () => {
+//     retract();
+// }
+
+// document.getElementById('menuBtn').onclick = e => {
+//     e.preventDefault();
+//     openMenu();
+// }
+
+// document.addEventListener('onmouseover', () => {
+//     gsap.to('.coke', { duration: 2, width: '100%', ease: "power4.out" })
+//     console.log("This is still running")
+// })
+
+// const openMenu = () => {
+//     document.querySelector('.backdrop').className = 'backdrop active';
+//     document.querySelector('aside').className = 'active';
+// }
+
+// const closeMenu = () => {
+//     document.querySelector('.backdrop').className = 'backdrop';
+//     document.querySelector('aside').className = '';
+// }
+
+
+
+// document.querySelector('aside button.close').onclick = e => {
+//     closeMenu();
+// }
+
+// document.querySelector('.backdrop').onclick = e => {
+//     closeMenu();
+// }

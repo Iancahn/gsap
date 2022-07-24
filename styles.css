@@ -18,22 +18,33 @@
     background: #F40009;
     color: white;
     border-radius: 50%;
+    transition-duration: 1000ms;
 }
 
-.coke p {
-    opacity: 0%;
-}
-
-/* .coke:hover {
+/* 
+.coke:hover {
     width: 800px;
     border-radius: 15%;
 } */
 
+.coke-text {
+    text-align: left;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
 .can {
     position: relative;
-    bottom: 70px;
+    bottom: 140px;
     right: 50px;
     max-height: auto;
     max-width: 550px;
     z-index: 5;
+    transition-duration: 1000ms;
 }
+
+/* .can:hover {
+    position: relative;
+    bottom: 120px;
+    right: -190px;
+} */
