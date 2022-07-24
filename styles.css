@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.coke {
+    width: 450px;
+    height: 450px;
+    margin: 100px auto;
+    background: #F40009;
+    transition-property: width;
+    color: white;
+    border-radius: 50%;
+}
+
+/* .coke:hover {
+    width: 800px;
+    border-radius: 15%;
+} */
+
+.can {
+    position: relative;
+    bottom: 70px;
+    right: 50px;
+    max-height: auto;
+    max-width: 550px;
+    z-index: 5;
+}
+
+.can:hover {
+    position: relative;
+    right: 1000px;
+}
